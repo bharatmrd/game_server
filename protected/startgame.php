@@ -19,23 +19,7 @@ $color = "#" . random_color();
 	<div class="container">
 	<div class="col-md-9" id="game">
 	<canvas id="canvas" width="800px" height="800px"></canvas>
-	<script>
-		function draw_board(x,y){
-    var grid = new Array([]);
-    for (var j=0;j<x;j++){
-        for(var i=0;i<y;i++){
-            grid.push("<div class='col-md-1'>X</div>");
-        }
-    }
-    document.body.innerHTML = grid;
-}	draw_board(10,10);
-	// document.getElementById("canvas").innerHTML = grid;
-    // document.getElementByClassName('a').style.border = "2px black";
-	</script>
-	<div class="container hover">
-		
-	</div>
-		<!-- <script>
+		<script>
 		var canvas = document.getElementById("canvas"),
 	    c = canvas.getContext("2d");
 		canvas.addEventListener('click', handleClick);
@@ -59,7 +43,7 @@ $color = "#" . random_color();
 		}
 
 		function handleClick(e) {
-	    	c.fillStyle = "<?php // echo $color; ?>";
+	    	c.fillStyle = "<?php echo $color; ?>";
 			console.log(e);
 	    	c.fillRect(Math.floor(e.offsetX/40)*40,
 	        	       Math.floor(e.offsetY/40)*40,
@@ -67,6 +51,6 @@ $color = "#" . random_color();
 		}
 
 		drawBox();
-		</script> -->
+		</script>
 </body>
 </html>
